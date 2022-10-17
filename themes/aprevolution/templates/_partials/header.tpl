@@ -28,37 +28,29 @@
   </div>
 {/block}
 
-{block name='header_nav'}
-  <nav class="header-nav">
-    <div class="container">
+{block name='main_banner'}
+<div id="main_banner" class="main-banner">
+  <div class="pull-right p-2">
+    {hook h='displayLanguageSelector'}
+  </div>
+</div>
+{/block}
+{block name='header_top'}
+  <div id="navbar_top" class="header-top">
+    <div id="main_navbar_top" class="container-fluid">
       <div class="row">
-        <div class="hidden-sm-down">
-          <div class="col-md-5 col-xs-12">
-            {hook h='displayNav1'}
-          </div>
-          <div class="col-md-7 right-nav">
-              {hook h='displayNav2'}
-          </div>
-        </div>
         <div class="hidden-md-up text-sm-center mobile">
           <div class="float-xs-left" id="menu-icon">
             <i class="material-icons d-inline">&#xE5D2;</i>
           </div>
           <div class="float-xs-right" id="_mobile_cart"></div>
           <div class="float-xs-right" id="_mobile_user_info"></div>
-          <div class="top-logo" id="_mobile_logo"></div>
+          <div class="top-logo hidden-fade" id="_mobile_logo"></div>
           <div class="clearfix"></div>
         </div>
       </div>
-    </div>
-  </nav>
-{/block}
-
-{block name='header_top'}
-  <div class="header-top">
-    <div class="container">
-       <div class="row">
-        <div class="col-md-2 hidden-sm-down" id="_desktop_logo">
+       <div class="row nav-row">
+        <div id="_desktop_logo" class="hidden-sm-down banner-logo">
           {if $shop.logo_details}
             {if $page.page_name == 'index'}
               <h1>
@@ -68,10 +60,28 @@
               {renderLogo}
             {/if}
           {/if}
+            </div>
+        <div class="display-menu-col">
+          {hook h='displayMainMenu'}
         </div>
-        <div class="header-top-right col-md-10 col-sm-12 position-static">
-          {hook h='displayTop'}
+        <div class="hidden-md-up search-mobile">
+          {hook h='displaySearch'}
         </div>
+        <div class="hidden-sm-down header-top">
+          <div class="right-nav-bar" >
+            <div >
+              <div class="search-icon">
+              <i class="material-icons">&#xe8b6;</i>
+              </div>
+            </div>
+            <div >
+            {hook h='displayCustomerSignin'}
+            </div>
+            <div class="cart-container">
+            {hook h='displayShoppingCart'}
+            </div>
+          </div>
+      </div>
       </div>
       <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
         <div class="js-top-menu mobile" id="_mobile_top_menu"></div>
@@ -82,6 +92,10 @@
         </div>
       </div>
     </div>
+    <div class="search-bar-desktop hidden-sm-down hidden">
+      {hook h='displaySearch'}
+    </div>
   </div>
+
   {hook h='displayNavFullWidth'}
 {/block}

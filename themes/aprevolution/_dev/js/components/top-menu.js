@@ -45,8 +45,10 @@ export default class TopMenu extends DropDown {
         elmtClass = classesSelected.join('');
 
         if (elmtClass && $(e.target).data('depth') === 0) {
-          $(`${elmtClass} .js-sub-menu`).css({
+          console.log($(`${elmtClass}`).position().left);
+          $(e.currentTarget).children('.js-sub-menu').css({
             top: $(`${elmtClass}`).height() + $(`${elmtClass}`).position().top,
+            left: $(e.currentTarget).position().left - 20,
           });
         }
       }

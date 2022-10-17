@@ -65,16 +65,18 @@ global_settings:
         - blockwishlist
       displayMyAccountBlock:
         - blockwishlist
-      displayNav1:
+      displayContactInfo:
         - ps_contactinfo
-      displayNav2:
+      displayLanguageSelector:
         - ps_languageselector
+      displayCurrencySelector:
         - ps_currencyselector
+      displayCustomerSignin:
         - ps_customersignin
+      displayShoppingCart:
         - ps_shoppingcart
-      displayTop:
+      displayMainMenu:
         - ps_mainmenu
-        - ps_searchbar
       displayHome:
         - ps_imageslider
         - ps_featuredproducts

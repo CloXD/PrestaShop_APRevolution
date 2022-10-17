@@ -13,6 +13,8 @@
     format("woff"), url(~material-design-icons-iconfont/dist/fonts/MaterialIcons-Regular.ttf)
     format("truetype");
 }
+
+
 /* stylelint-enable */
 
 .material-icons {
@@ -43,3 +45,13 @@
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+
+@backslash {
+  font-family: "Backslash";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Backslash.otf");
+
+}
+
